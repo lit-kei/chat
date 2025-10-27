@@ -34,7 +34,7 @@ supabase
 function addMessage(msg) {
     const div = document.createElement("div");
     div.textContent = `[${msg.username}] ${msg.message}`;
-    document.getElementById("chat").prevent(div);
+    document.getElementById("chat").prepend(div);
 }
 
 loadMessages();
