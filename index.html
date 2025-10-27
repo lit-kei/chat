@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>リアルタイムチャット</title>
+    <meta charset="UTF-8">
+    <title>リアルタイムチャット</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
-  <h2>リアルタイムチャット</h2>
-  
-  <input id="message" placeholder="メッセージ">
-  <button id="sendBtn">送信</button>
+    <h2>リアルタイムチャット</h2>
+    <form id="myform">
+        <input id="message" placeholder="メッセージ">
+        <button id="sendBtn" type="submit">送信</button>
+    </form>
 
-  <div id="chat"></div>
+    <div id="chat"></div>
 
-  <script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
