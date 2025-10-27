@@ -7,6 +7,7 @@ const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 let username = localStorage.getItem('username');
 if (!username) {
     username = prompt("あなたのニックネームは？");
+    localStorage.setItem('username',username);
 }
 
 // 🔹 メッセージ送信
