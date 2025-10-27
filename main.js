@@ -7,7 +7,7 @@ const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 
     // 🔹 メッセージ送信
     document.getElementById("sendBtn").onclick = async () => {
-      const username = document.getElementById("username").value;
+      const username = document.getElementById("name").value;
       const message = document.getElementById("message").value;
       await supabase.from("messages").insert([{ username, message }]);
       document.getElementById("message").value = "";
