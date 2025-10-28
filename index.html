@@ -9,13 +9,15 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
-    <h2>リアルタイムチャット</h2>
-    <form id="myform">
-        <input id="message" placeholder="メッセージ">
-        <button id="sendBtn" type="submit">送信</button>
-    </form>
-
+    <h1>リアルタイムチャット</h1>
+    <div id="board">
     <div id="chat"></div>
+
+    <form id="form">
+      <input id="message" placeholder="書き込み内容">
+      <button id="sendBtn" type="submit">書き込む</button>
+    </form>
+    </div>
 
     <script src="main.js"></script>
 </body>
