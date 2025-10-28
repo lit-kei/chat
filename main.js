@@ -35,11 +35,10 @@ function addMessage(msg, index) {
     const div = document.createElement("div");
     div.className = "post";
     const date = new Date(msg.created_at).toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" });
-    const id = makeId();
     div.innerHTML = `
         <div class="meta">
           <span class="number">${index} ：</span>
-          <span class="name">${msg.username || "名無しさん"}</span>：${date} ID:${id}
+          <span class="name">${msg.username || "名無しさん"}</span>：${date}
         </div>
         <div class="content">${msg.message}</div>
     `;
