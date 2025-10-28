@@ -13,7 +13,6 @@ if (!username) {
 // 🔹 メッセージ送信
 document.getElementById("form").addEventListener("submit", async (e) => {
   e.preventDefault(); // ページリロード防止
-  const username = document.getElementById("username").value || "名無しさん";
   const message = document.getElementById("message").value.trim();
   if (!message) return;
 
