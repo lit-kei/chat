@@ -11,11 +11,15 @@ if (!username) {
 }
 
 // 🔹 メッセージ送信
-document.getElementById("sendBtn").onclick = async () => {
-    const message = document.getElementById("message").value;
-    await supabase.from("messages").insert([{ username, message }]);
-    document.getElementById("message").value = "";
-};
+document.getElementById("form").addEventListener("submit", async (e) => {
+  e.preventDefault(); // ページリロード防止
+  const username = document.getElementById("username").value || "名無しさん";
+  const message = document.getElementById("message").value.trim();
+  if (!message) return;
+
+  await supabase.from("messages").insert([{ username, message }]);
+  document.getElementById("message").value = "";
+});
 
 // 🔹 初回ロード時に履歴を取得
 async function loadMessages() {
