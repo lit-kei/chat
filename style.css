@@ -6,8 +6,8 @@
       padding: 0;
     }
     #board {
-      width: 80%;
-      max-width: 800px;
+      width: 90%;
+      max-width: 1000px;
       margin: 40px auto;
       background: #fff;
       border: 1px solid #ccc;
