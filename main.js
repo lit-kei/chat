@@ -4,6 +4,7 @@ const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 
 
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const chat = document.getElementById("chat");
 let username = localStorage.getItem('username');
 if (!username) {
     username = prompt("あなたのニックネームは？");
@@ -37,6 +38,7 @@ supabase
 function addMessage(msg, index) {
     const div = document.createElement("div");
     div.className = "post";
+    if (!index) index = chat.children.length;
     const date = new Date(msg.created_at).toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" });
     div.innerHTML = `
         <div class="meta">
@@ -45,6 +47,8 @@ function addMessage(msg, index) {
         </div>
         <div class="content">${msg.message}</div>
     `;
-    document.getElementById("chat").appendChild(div);
+    chat.appendChild(div);
+    chat.scrollTop = chat.scrollHeight;
+
 }
 loadMessages();
