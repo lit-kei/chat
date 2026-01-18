@@ -1,3 +1,5 @@
+console.log("main.js start", performance.now());
+
 
 const SUPABASE_URL = "https://wdbmtwcqhnibtqjoohpx.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndkYm10d2NxaG5pYnRxam9vaHB4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE1MzIxNzMsImV4cCI6MjA3NzEwODE3M30.oDulederjVKKLBoHRbbleb4uIStjMD_3ulyHRneMoyo";
